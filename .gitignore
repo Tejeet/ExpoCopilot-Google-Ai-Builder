@@ -1,0 +1,16 @@
+# Build outputs
+build/
+*/build/
+.gradle/
+
+# Machine-local files
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# Android Studio / Kotlin
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/

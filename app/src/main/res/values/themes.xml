@@ -1,0 +1,19 @@
+<resources>
+    <!-- Plain platform theme as the Activity's pre-Compose window theme. Deliberately not
+         Theme.Material3.* here: that XML style ships in com.google.android.material:material,
+         which this project does not depend on (all UI is Jetpack Compose Material3 instead). -->
+    <style name="Theme.CardDrop" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Matches the navy top of the home screen's header and the navy top bars. -->
+        <item name="android:statusBarColor">@color/brand_navy</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:colorAccent">@color/brand_teal</item>
+    </style>
+
+    <!-- Shown by the system while the app starts (androidx core-splashscreen backports it below API 31). -->
+    <style name="Theme.ExpoCopilot.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/brand_navy</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.CardDrop</item>
+    </style>
+</resources>
